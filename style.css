@@ -1,0 +1,526 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+  text-decoration: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "TT Travels";
+  font-weight: 500;
+  font-style: normal;
+  src: url("assets/fonts/TT Travels/TTTravels-Medium.woff") format("woff"), url("assets/fonts/TT Travels/TTTravels-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "TT Travels";
+  font-weight: 500;
+  font-style: italic;
+  src: url("assets/fonts/TT Travels/TTTravels-MediumItalic.woff") format("woff"), url("assets/fonts/TT Travels/TTTravels-MediumItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GothamPro";
+  font-weight: 400;
+  font-style: normal;
+  src: url("assets/fonts/GothamPro/gothampro.woff") format("woff"), url("assets/fonts/GothamPro/gothampro.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GothamPro";
+  font-weight: 500;
+  font-style: normal;
+  src: url("assets/fonts/GothamPro/gothampro_medium.woff") format("woff"), url("assets/fonts/GothamPro/gothampro_medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GothamPro";
+  font-weight: 700;
+  font-style: normal;
+  src: url("assets/fonts/GothamPro/gothampro_bold.woff") format("woff"), url("assets/fonts/GothamPro/gothampro_bold.woff2") format("woff2");
+}
+* {
+  font: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+body {
+  font-family: GothamPro;
+  font-weight: 500;
+  background-color: #140202;
+  background-image: url("assets/images/bg.png");
+}
+
+.container {
+  max-width: 1297px;
+  margin-inline: auto;
+}
+
+.section_framed > .container {
+  padding-block: 54px;
+}
+.section_framed::before, .section_framed::after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin-inline: auto;
+  height: 1px;
+  background: linear-gradient(to right, #080101 0%, #FFFFFF 50%, #080101 100%);
+}
+
+.icon-button {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.icon-button > img {
+  display: block;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  background-color: #530101;
+  padding: 12px 40px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: -0.0632em;
+  font-weight: 700;
+}
+
+.button__text {
+  align-self: flex-end;
+}
+
+.link {
+  font-weight: 500;
+  color: #EDA63A;
+}
+
+.text {
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.0632em;
+  line-height: 27px;
+}
+.text > strong {
+  font-weight: 500;
+  letter-spacing: -0.0652em;
+}
+
+.minitext {
+  border-left: 1px solid #FF7171;
+  border-right: 1px solid #FF7171;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 400;
+  padding-inline: 16px;
+  padding-top: 7px;
+  padding-bottom: 18px;
+  letter-spacing: -0.0632em;
+  line-height: 19px;
+}
+.minitext .link {
+  font-weight: 400;
+}
+
+.header {
+  background: linear-gradient(180deg, #530101 0%, #080101 100%) top center no-repeat;
+  background-size: 100% 105px;
+  padding-top: 68px;
+  font-family: TT Travels;
+}
+
+.header__logo {
+  align-self: flex-end;
+  margin-bottom: -37px;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  max-width: 1270px;
+}
+
+.header__nav {
+  margin-left: 88px;
+}
+
+.header__nav-ul {
+  display: flex;
+  gap: 23px;
+}
+
+.header__nav-li {
+  transition: transform 0.2s ease;
+  transform: scale(1);
+}
+.header__nav-li:hover {
+  transform: scale(1.1);
+}
+
+.header__nav-link {
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.header__actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.header__actions > * {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition: transform 0.2s ease;
+  transform: scale(1);
+}
+.header__actions > *:hover {
+  transform: scale(1.1);
+}
+
+.header__search {
+  margin-top: -15px;
+}
+
+.header__burger-btn {
+  display: none;
+  transition: transform 0.2s ease;
+  transform: scale(1);
+}
+.header__burger-btn:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1440px) {
+  .header__container {
+    max-width: 90vw;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .header__nav {
+    display: none;
+  }
+  .header__burger-btn {
+    display: block;
+    margin-left: 48px;
+  }
+  .header__actions {
+    margin-left: auto;
+    gap: 16px;
+  }
+  .header__container {
+    justify-content: start;
+  }
+}
+@media screen and (max-width: 840px) {
+  .header__actions {
+    display: none;
+  }
+  .header__burger-btn {
+    margin-left: auto;
+  }
+}
+.hero {
+  margin-top: 72px;
+  margin-bottom: 54px;
+}
+
+.hero__container {
+  text-align: center;
+}
+
+.hero__breadcrumbs {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.0632em;
+}
+.hero__breadcrumbs .link {
+  font-weight: 400;
+}
+
+.hero__title {
+  font-family: GothamPro;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -0.0632em;
+  color: #FFFFFF;
+}
+
+.hero__text {
+  margin-top: 108px;
+  font-size: 28px;
+  letter-spacing: -0.0632em;
+  line-height: 27px;
+  text-align: left;
+  font-family: GothamPro;
+}
+
+.view__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.view__link {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.0632em;
+}
+
+.video__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 66px;
+  margin-bottom: 100px;
+}
+
+.video__preview > img, .video__preview source {
+  border-radius: 31px;
+}
+
+.video__link {
+  margin-bottom: 50px;
+}
+
+.founded__text > .link {
+  font-weight: 400;
+}
+
+.team {
+  margin-top: 54px;
+}
+
+.consist::before {
+  display: none;
+}
+
+.foundation::before {
+  display: none;
+}
+
+.foundation__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foundation__img > source, .foundation__img img {
+  border-radius: 24px;
+}
+
+.foundation__text {
+  margin-top: 54px;
+}
+
+.cardgame__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardgame__text {
+  margin-top: 54px;
+}
+.cardgame__text > .link {
+  font-weight: 400;
+}
+
+.cardgame__minitext {
+  margin-top: 54px;
+}
+
+.links2 {
+  margin-block: 54px;
+}
+
+.links2__text {
+  margin-bottom: 54px;
+  font-weight: 400;
+}
+.links2__text .link {
+  font-weight: 400;
+}
+
+.links2__advertise {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+.links2__advertise > img {
+  margin-right: 22px;
+}
+
+.footer__top {
+  background: #5C0000;
+  padding-block: 54px;
+}
+
+.footer__bottom {
+  background: linear-gradient(90deg, #5c0000 0%, #370101 50%, #5c0000 100%);
+  padding-block: 54px;
+}
+
+.footer-top__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1038px;
+}
+
+.footer__top-left {
+  flex: 17;
+}
+
+.footer__top-right {
+  flex: 6;
+}
+
+.footer__top-text {
+  margin-top: 3px;
+  font-size: 18px;
+  line-height: 16.9px;
+  letter-spacing: -0.0632em;
+}
+
+.footer__articles {
+  margin-top: 68px;
+}
+
+.footer__article-title {
+  font-size: 20px;
+  letter-spacing: -0.06em;
+}
+
+.footer__articles-list {
+  margin-top: 38px;
+}
+
+.footer__article-date {
+  font-size: 12px;
+  line-height: 15px;
+  padding-block: 2px;
+  letter-spacing: -0.0632em;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.footer__article-date {
+  color: #FFFFFF;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.06em;
+  color: #FFFFFF;
+}
+
+.footer__knowledges-text {
+  margin-left: 22px;
+  margin-top: 22px;
+  font-size: 19px;
+  line-height: 158.5%;
+  font-weight: 700;
+}
+
+.footer__forfans {
+  color: #FFFFFF;
+  margin-top: 34px;
+  line-height: 160%;
+  font-size: 18px;
+  letter-spacing: -0.06em;
+}
+.footer__forfans > .link {
+  letter-spacing: -0.09em;
+  font-size: 20px;
+}
+
+.footer-bottom__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 26px;
+}
+
+.footer__helpful {
+  margin-top: 28px;
+  display: flex;
+  gap: 23px;
+  line-height: 19px;
+  font-family: TT Travels;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.footer__danger {
+  color: #FFFFFF;
+  font-style: italic;
+  font-family: TT Travels;
+  margin-top: 28px;
+}
